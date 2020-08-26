@@ -17,6 +17,8 @@ RUN apt-get update \
         gnupg \
         libasound2-dev \
         libjack-dev \
+        libsndfile1 \
+        portaudio19-dev \
     && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg \
         | apt-key --keyring /usr/share/keyrings/cloud.google.gpg add - \
     && apt-get update \
