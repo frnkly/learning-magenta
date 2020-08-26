@@ -21,9 +21,7 @@ cat ./.docker-hub-token \
 | Paramater | Value |
 | --- | --- |
 | Machine type | `n2-standard-16` |
-| Container image | `docker.io/library/frnkly/learning-magenta:latest` |
-| Container options | Always restart, STDIN, TTY |
-| Boot disk | Container-optimized OS (latest SDD, 10GB) |
+| Boot disk | Container-optimized OS (latest SDD, 50GB) |
 | Service account | Compute engine default |
 | Preemptibility | On |
 </details>
@@ -32,6 +30,9 @@ cat ./.docker-hub-token \
     <summary>Setting up dev environment</summary>
 
 ```shell
+# Create Docker container
+docker run --interactive --tty --rm frnkly/learning-magenta
+
 # Initialize gcloud
 gcloud init --console-only
 
